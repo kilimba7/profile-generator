@@ -1,5 +1,5 @@
 // Creating the page structure where data is going to be displayed
-function generatePage(data) {
+function generatePage(team) {
     return `
 <!DOCTYPE html>
 <html lang="en">
@@ -18,13 +18,42 @@ function generatePage(data) {
     <main>
         <section class=card>
         <h2>
-        ${data.role}
-        ${data.employee}
+        ${team.name}
+        ${team.name}
         </h2>
-        <p> Github: <a href="https://github.com/${data.github}">${data.github}</a>
+        <p> ${team.id}
         </p>
 
-        <p> Email: <a href="${data.email}">${data.email}</a>
+        <p> Email: <a href="${team.email}">${team.email}</a>
+            ${team.officeNumber}
+        </p>
+        </section>
+
+
+        <section class=card>
+        <h2>
+        ${team.engineer}
+        ${team.nameE}
+        </h2>
+        <p> Github: <a href="https://github.com/${team.github}">${team.github}</a>
+        </p>
+
+        <p> Email: <a href="${team.emailE}">${team.emailE}</a>
+        
+        </p>
+        </section>
+
+
+        <section class=card>
+        <h2>
+        ${team.intern}
+        ${team.nameI}
+        </h2>
+        <p> School: ${team.school}
+        </p>
+
+        <p> Email: <a href="${team.emailI}">${team.emailI}</a>
+        
         </p>
         </section>
     </main>
