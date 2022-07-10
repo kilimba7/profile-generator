@@ -13,11 +13,14 @@ function generatePage(data) {
 </head>
 <body>
     <header>
-       <h1 bg-red> My Team </h1>
+       <h1 class="text-justify"> My Team </h1>
     </header>
     <main>
-        <section>
-        <h2>${data.employee}</h2>
+        <section class=card>
+        <h2>
+        ${data.role}
+        ${data.employee}
+        </h2>
         <p> Github: <a href="https://github.com/${data.github}">${data.github}</a>
         </p>
 

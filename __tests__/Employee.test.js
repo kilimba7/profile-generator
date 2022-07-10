@@ -1,15 +1,48 @@
-const Employee = require('..lib/Employee');
+const Employee = require("../lib/Employee");
 
-// Come back to this (example given for reading data from a file)
-// const fs = require('fs');
-// jest.mock('fs');
-// fs.readFileSync.mockReturnValue('fake content');
+test("Instantiate Employee instance", () => {
+  const e = new Employee();
+  expect(typeof(e)).toBe("object");
+});
 
-test('creates a name object', () => {
-    const employee = new Employee(`${nameInput}`);
+test("Creates a new name for the employee", () => {
+  const name = "bob";
+  const e = new Employee(name);
+  expect(e.name).toBe(name);
+});
 
-    expect(employee.name).toEqual(expect.any(String));
-    expect(employee.id).toEqual(expect.any(Number))
-    expect(employee.email).toEqual(expect.any(String));
+test("Creates a new id for the employee", () => {
+    const test = 1;
+    const e = new Employee('bob', test);
+    expect(e.id).toBe(test);
+  });
 
-})
+  test("Creates a new email for the employee", () => {
+    const test = "bob@yahoo.com";
+    const e = new Employee('bob', 1, test);
+    expect(e.email).toBe(test);
+  });
+
+  test("gets name for the employee", () => {
+    const name = "bob";
+    const e = new Employee(name);
+    expect(e.getName()).toBe(name);
+  });
+  
+  test("gets id for the employee", () => {
+      const test = 1;
+      const e = new Employee('bob', test);
+      expect(e.getId()).toBe(test);
+    });
+  
+    test("Gets email for the employee", () => {
+      const test = "bob@yahoo.com";
+      const e = new Employee('bob', 1, test);
+      expect(e.getEmail()).toBe(test);
+    });
+
+  test("gets role for employee", () => {
+    const test = "Employee";
+    const e = new Employee('bob', 1, 'bob@yahoo.com');
+    expect(e.getRole()).toBe(test);
+  });
