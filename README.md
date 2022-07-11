@@ -19,7 +19,7 @@
   Clone repo, install inquirer and jest.
 
   ## Usage
-  Link to demo: 
+  Link to demo: https://drive.google.com/file/d/1FQz6FwwcrzI9mvRzEWKhW1vaBp68_C6M/view
 
   ## License
   No license used: https://choosealicense.com/no-permission/
