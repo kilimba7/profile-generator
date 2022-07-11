@@ -1,10 +1,6 @@
 // export function to generate entire page
-module.exports = teamData => {
-
-    console.log(teamData[0]);
-    console.log(teamData[1]);
-    console.log(teamData[2]);
-
+  module.exports = teamData => {
+  
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -14,40 +10,60 @@ module.exports = teamData => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Portfolio Demo</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     </head>
     
     <body>
-
       <main>
-        <section class="card">
-            <h1 class="text-justify">My Team</h1>
-            <ul class="card">
-                <li>${teamData[0].name}</li>
-                <li>${teamData[0].id}</li>
-                <li>${teamData[0].email}</li>
-                <li>${teamData[0].officeNumber}</li>
-            </ul>
+      <h1 class="text-center text-white bg-danger ">My Team</h1>
+      <section class="container" >
+      <div class="card">
 
-            <ul class="card">
-            
-                <li>${teamData[1].name}</li>
-                <li>${teamData[1].id}</li>
-                <li>${teamData[1].email}</li>
-                <li>${teamData[1].github}</li>
-            
-            </ul>
+          <h4 class="card-title bg-primary text-white">${teamData[0]?.name} 
+          <br></br>
+          ${teamData[0]?.getRole()}</h4>
+          
+          <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: ${teamData[0]?.id}</li>
+          <li class="list-group-item">Email: <a href= "mailto:${teamData[0]?.email}">${teamData[0]?.email}</a> </li>
+          <li class="list-group-item">Office Number: ${teamData[0]?.officeNumber}</li>
+          </ul>
+        </div>
 
-            <ul class="card">
 
-                <li>${teamData[2].name}</li>
-                <li>${teamData[2].id}</li>
-                <li>${teamData[2].email}</li>
-                <li>${teamData[2].school}</li>
-            
-            </ul> 
-        </section>
+
+      <div class="card">
+
+      <h4 class="card-title bg-primary text-white">${teamData[1]?.name} 
+      <br></br>
+      ${teamData[1]?.getRole()}</h4>
+      
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item">ID: ${teamData[1]?.id}</li>
+      <li class="list-group-item">Email: <a href= "mailto:${teamData[1]?.email}">${teamData[1]?.email}</a> </li>
+      <li class="list-group-item">Github: <a href= "https://github.com/${teamData[1]?.github}">${teamData[1]?.github}</a></li>
+      </ul>
+    </div>
+
+
+
+    <div class="card">
+
+    <h4 class="card-title bg-primary text-white">${teamData[2]?.name} 
+    <br></br>
+    ${teamData[2]?.getRole()}</h4>
+    
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">ID: ${teamData[2]?.id}</li>
+    <li class="list-group-item">Email: <a href= "mailto:${teamData[2]?.email}">${teamData[2]?.email}</a> </li>
+    <li class="list-group-item">School: ${teamData[2]?.school}</li>
+    </ul>
+    </div>
+
+    
+      
+    
       </main>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </body>
     </html>
     `;
