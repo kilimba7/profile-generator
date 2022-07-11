@@ -21,12 +21,6 @@ const questionsManager = () => {
         message: 'Please enter your name (Manager)',
     },
     {
-      type: 'confirm',
-      name: 'manager',
-      message: 'Please confirm that you are the manager',
-      default: true
-    },
-    {
         type: 'input',
         name: 'id',
         message: 'Enter your ID',
@@ -45,7 +39,6 @@ const questionsManager = () => {
     .then(val => {
       const m = new Manager(
         val.name,
-        val.manager,
         val.id,
         val.email,
         val.officeNumber
@@ -88,24 +81,25 @@ const questionsEngineer = () => {
   .prompt([
     {
       type: 'input',
-      name: 'nameE',
+      name: 'name',
       message: 'What is your name?'
     },
     {
       type: 'input',
-      name: 'idE',
+      name: 'id',
       message: 'What is your ID?'
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email?'
     },
     {
       type: 'input',
       name: 'github',
       message: 'What is your github username?'
     },
-    {
-      type: 'input',
-      name: 'emailE',
-      message: 'What is your email?'
-    },
+
     {
       type: 'confirm',
       name: 'engineer',
@@ -117,8 +111,8 @@ const questionsEngineer = () => {
     const e = new Engineer(
       val.name,
       val.id,
-      val.github,
       val.email,
+      val.github,
       val.engineer
     )
     team.push(e);
@@ -133,23 +127,23 @@ const questionsIntern = () => {
   .prompt([
     {
       type: 'input',
-      name: 'nameI',
+      name: 'name',
       message: 'What is your name?'
     },
     {
       type: 'input',
-      name: 'idI',
+      name: 'id',
       message: 'What is your ID?'
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email?'
     },
     {
       type: 'input',
       name: 'school',
       message: 'Where did you go to school?'
-    },
-    {
-      type: 'input',
-      name: 'emailI',
-      message: 'What is your email?'
     },
     {
       type: 'confirm',
@@ -162,8 +156,8 @@ const questionsIntern = () => {
     const i = new Intern(
       val.name,
       val.id,
-      val.school,
       val.email,
+      val.school,
       val.intern
     )
     team.push(i);
