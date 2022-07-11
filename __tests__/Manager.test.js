@@ -9,9 +9,6 @@ test("get information from constructor", () => {
   expect(m.officeNumber).toBe('200');
 });
 
-// test("gets office number", () => {
-//     expect(m.getOfficeNumber()).toBe('200');
-//   });
   
 
 test("gets role for manager", () => {
