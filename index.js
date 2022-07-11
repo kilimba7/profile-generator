@@ -82,7 +82,7 @@ const questionsEngineer = () => {
     {
       type: 'input',
       name: 'name',
-      message: 'What is your name?'
+      message: 'What is your name? (Engineer)'
     },
     {
       type: 'input',
@@ -99,13 +99,6 @@ const questionsEngineer = () => {
       name: 'github',
       message: 'What is your github username?'
     },
-
-    {
-      type: 'confirm',
-      name: 'engineer',
-      message: 'Please confirm that your role is engineer',
-      default: true
-    },
   ])
   .then(val => {
     const e = new Engineer(
@@ -113,7 +106,6 @@ const questionsEngineer = () => {
       val.id,
       val.email,
       val.github,
-      val.engineer
     )
     team.push(e);
     addToTeam();
@@ -128,7 +120,7 @@ const questionsIntern = () => {
     {
       type: 'input',
       name: 'name',
-      message: 'What is your name?'
+      message: 'What is your name? (Intern)'
     },
     {
       type: 'input',
@@ -145,12 +137,6 @@ const questionsIntern = () => {
       name: 'school',
       message: 'Where did you go to school?'
     },
-    {
-      type: 'confirm',
-      name: 'intern',
-      message: 'Please confirm that your role is an intern',
-      default: true
-    },
   ])
   .then(val => {
     const i = new Intern(
@@ -158,7 +144,6 @@ const questionsIntern = () => {
       val.id,
       val.email,
       val.school,
-      val.intern
     )
     team.push(i);
     addToTeam();

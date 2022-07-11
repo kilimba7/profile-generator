@@ -17,7 +17,7 @@
       <main>
       <h1 class="text-center text-white bg-danger ">My Team</h1>
       <section class="container" >
-      <div class="card">
+      <div class="card-deck mt-3" style="width: 18rem;">
 
           <h4 class="card-title bg-primary text-white">${teamData[0]?.name} 
           <br></br>
@@ -32,7 +32,7 @@
 
 
 
-      <div class="card">
+      <div class="card-deck mt-3" style="width: 18rem;">
 
       <h4 class="card-title bg-primary text-white">${teamData[1]?.name} 
       <br></br>
@@ -47,7 +47,7 @@
 
 
 
-    <div class="card">
+    <div class="card-deck mt-3" style="width: 18rem;">
 
     <h4 class="card-title bg-primary text-white">${teamData[2]?.name} 
     <br></br>
